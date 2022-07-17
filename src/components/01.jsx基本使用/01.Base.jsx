@@ -28,7 +28,6 @@ export default {
 						<li>{v.name}</li>
 					))}
 				</ul>
-				<span>666</span>
 			</div>
 		)
 	},
