@@ -13,7 +13,7 @@ export default {
         {/**自定义作用域插槽*/}
         <div className="item">
           {this.$scopedSlots.test({
-            user: { name: '纸飞机' }
+            user: { name: '安倍晋三' }
           })}
         </div>
       </div>

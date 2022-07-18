@@ -55,11 +55,15 @@ export default {
       {isShow(1)}
       {isShow(2)}
       <hr/>
-      {/* v-modal 无效*/}
+      {/* v-modal 从this中结构出来就无效了 无效*/}
       <input type="text" v-modal={this.inputVal}/> {/* 好像不起作用 */}
       {/* 非受控组建 */}
       <hr/>
-      <input type="text" ref={(x) => this.inputRef = x} onInput={() => handleInputChange()}/>
+      <input type="text" ref={(x) => {
+        console.log(x)
+        return this.inputRef = x
+        }
+      } onInput={() => handleInputChange()}/>
       {/* computed use */}
       <h3>{this.newCom}</h3>
       

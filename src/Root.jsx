@@ -10,6 +10,11 @@ export default {
 		TestStylScope,
 		TsxUse,
 	},
+	data() {
+		return {
+			inputVal: ''
+		}
+	},
 	render() {
 		return <div>
 			<TestSlot visible={this.visible}
@@ -28,6 +33,10 @@ export default {
 			<v-base/>
 			<test-styl-scope/>
 			<tsx-use/>
+			<div>
+				<p>v-model: {this.inputVal}</p>
+				<input type="text" v-model={this.inputVal}/>
+			</div>
 		</div>
 	},
 }
